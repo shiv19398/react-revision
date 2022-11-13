@@ -1,0 +1,25 @@
+.primary {
+  color: orange;
+}
+
+.Box {
+  border: 2px solid black;
+}
+
+.Box--dark {
+  color: white;
+  background-color: rgb(87, 86, 86);
+}
+
+.Box--light {
+  background-color: rgb(206, 227, 249);
+}
+
+.Button--light {
+  background-color: aqua;
+}
+
+.Button--dark {
+  color: white;
+  background-color: rgb(14, 8, 8);
+}

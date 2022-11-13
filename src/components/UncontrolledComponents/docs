@@ -1,0 +1,5 @@
+Refs make it possible to access DOM nodes directly within React.
+We can create a ref to a class component check out Input.js for this.
+
+Forwarding Refs
+Ref forwarding is a technique to pass refs automatically from a component to one of its child component.

@@ -1,0 +1,11 @@
+Higher order components comes into picture where you need the same functionality for the different components.
+So, instead of duplicating the code we can use Higher Order Components to reuse the functionality of one component into another
+
+## Why Higher Order Components?
+A pattern where a function takes a component as an argument and returns a new component.
+
+const NewComponent=higherOrderCompoent(originalComponent)
+
+When we pass a prop to component which is wrapped in Higher order component, then that prop is not being passed to that component, instead it is being passed to its Higher order component in which it is wrapped
+
+if you really want to access that then we have to pass that prop to wrapped component in your hoc by using spread operator

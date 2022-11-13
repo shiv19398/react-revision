@@ -1,0 +1,2 @@
+In HTML, all different types of input elements and tags are responsible for their own change in text or whatever.
+But here in React, we want React to take control of all these things.

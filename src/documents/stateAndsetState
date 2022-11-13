@@ -1,0 +1,13 @@
+There is second way to influence what is rendered on the screen
+
+we should not change the state directly.
+Always use setState method in case of class Component
+If you modify the state directly, the react will not re-render the Component
+Calls to setState are asynchronous
+the setState method has two parameters :-
+1. state object
+2. callback function:- Code has to be executed after the state has been updated? Place that code in the call back function which is the second argument to the setState method.
+
+React may group multiple setState calls into one setState calls to optimize the performance
+
+When you have to update the state based on the previous state value, pass in a function as an argument instead of the regular object.

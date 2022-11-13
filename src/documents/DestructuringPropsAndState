@@ -1,0 +1,27 @@
+// In Functional Component
+// <Greet name="Shiv" heroName="Giri"/>
+
+// import React from 'react';
+
+// const Greet=({name,heroName})=>{
+//     return(
+//         <div>
+//         <p>{name}</p>
+//         <p>{heroName}</p>
+//         </div>
+//     );
+// }
+
+// export default Greet;
+
+// In Class Component
+
+// class Greet extends Component{
+// render(){
+//     const {name,heroName}=this.props
+//     return(
+//         <h1>{name}</h1>
+//         <h1>{heroName}</h1>
+//     )
+// }
+// }

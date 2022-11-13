@@ -1,0 +1,81 @@
+We can maily classify the methods into four stages:-
+Mounting- constructor, static getDerivedStateFromProps, render and componentDidMount
+Updating :- static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate
+Unmounting:- componentWillUnmount
+Error Handling:- static getDerivedStateFromError and componentDidCatch
+
+## Mounting:-
+
+1. constructor
+   a) A special function that will get called whenever a new component is created.
+   b) place to define states and binding the event handlers
+   c) Do not cause side effects, Ex: HTTP requests
+   d) super(props)
+   e) only place where you can directly overwrite this.state
+
+2. static getDerivedStateFromProps(props, state)
+   a) When the state of the component depends on changes in props over time.
+   b) Set the state
+   c) Do not cause side effects, Ex: HTTP requests
+
+3. render()
+   a) Only required method in class component.
+   b) Read props and state and return JSX.
+   c) Do not change state or interact with DOM or make ajax calls
+   d) Right after the parent component render method, children component lifecycle methods are also executed.
+
+4. componentDidMount()
+   a) Invoked immediately after a component and all its children components have been rendered to the DOM.
+   b) Cause side effects, Ex: Interact with the DOM or perform any ajax calls to load data.
+   c) Good place to perform initialization that requires DOM nodes and also load data by making network requests.
+
+## Updating LifeCycle Methods:-
+
+1. static getDerivedStateFromProps(props, state)
+   a) called everytime whenever component re-render
+   b) set the state.
+   c) Do not cause side effects, Ex: HTTP requests.
+
+2. shouldComponentUpdate(nextProp, nextState)
+   a) dictates if the component should re-render or not
+   b) performance optimization purposes
+   c) Do not cause side effects, Ex: HTTP requests or calling the setState methods.
+
+3. render()
+   a) same as mounting stage.
+
+4. getSnapShotBeforeUpdate(prevProps, prevState)
+   a) Called right before the changes from the virtual DOM are to be reflected in the DOM.
+   b) Capture some information from the DOM.
+   c) Method will either return null or return a value. Returned value will be passed as the third parameter to the next method.
+
+5. componentDidUpdate(prevPros, prevState,snapshot)
+   a) Called after the render is finished in the re-render cycles.
+   b) Cause side effects but before calling the side effects make sure to compare prevProps and current Props to decide whether to call side effects or not.
+   c) Called only once when the component gets updated.
+
+## Unmounting Phase Method
+
+1.componentWillUnmount()
+a) Method is invoked immediately before a component is unmounted and destroyed.
+b) Cancelling any network requests, removing event handlers, cancellin any subscriptions and also invalidating timers.
+c) Do not call the setState method
+
+Error Handling Phase Methods:-
+This is where error boundaries take the spotlight.
+
+1. static getDerivedStateFromError(error)
+2. componentDidCatch(error, info)
+
+   These methods are called when there is an error either during rendering, in a lifecycle method, or in the constructor of any child component.
+
+## Error Boundary
+
+When there is a runtime error , React basically unmount the whole component What if by any means, we could catch error and display the fallback ui.
+
+A class component that implements either one or both of the lifecycle methods getDerivedStateFromError or componentDidCatch becomes an error boundary.
+
+The static method getDerivedStateFromError is used to render a fallback UI after an error is thrown and the componentDidCatch method is used to log the error information.
+
+Error Boundaries catch errors during rendering lifecycle methods and constructor of the whole tree below them.
+It does not catch errors during event handling. If you want to catch errors during event handling , then you have to do with traditional try/catch statment.

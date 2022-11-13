@@ -1,0 +1,5 @@
+there are four ways to conditionally render the component
+1. if/else
+2. element variables
+3. ternary operator
+4. Short circuit operator

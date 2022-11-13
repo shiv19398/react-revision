@@ -1,0 +1,13 @@
+props 
+props get passed to the component.
+function parameters
+props are immutable.
+props- Functional components
+this.props- Class components
+
+state
+state is managed within the component.
+Variables declared in the function body
+state can be changed.
+useState Hook- Functional components
+this.state- Class components

@@ -1,0 +1,36 @@
+What is React?
+
+Open Source library for building user interfacess
+
+Not a framework which means it focues only on one thing and that is UI which it does really well.
+
+As it is a framework, it does not handle other aspects like routing and http requests.
+
+For all these things, it has aa rich ecosystem for routing, styling and for handling asynchronous requests.
+
+Why learn React?
+
+Created and maintained by Facebook. Facebook is a big company and it is spending tym and money for maintaining React so it is not going to go down anytime.
+
+More than 100k stars on Github.
+
+Huge Community
+
+In demand skillset.
+
+The technical features that makes React a good choice are :
+
+1. Component Based Architecture:- A traditional website can be broken down into a)Header b)SideNav c)Main content d)Footer. Each sections makes up a component which when composed in a right way build up the entire website.
+
+2. Reusable Code:- Components make it possible to reuse code in React. For example:- You created a article component in React , this same component can be used in Angular and Vue by passing right amount of data.
+
+3. React is declarative:-
+   a) Tell React what you want and React will build the actual UI.
+   b) React will handle efficiently updating and rendering of the components.
+   c) DOM updates are handled gracefully in React with virtual DOM.
+
+4. Seamlessly integrate React into any of your applications.
+
+5. Portion of your page or a complete page or even an entire application itself.
+
+6. React native for mobile appliations.
